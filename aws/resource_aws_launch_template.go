@@ -389,7 +389,7 @@ func resourceAwsLaunchTemplate() *schema.Resource {
 						"http_protocol_ipv6": {
 							Type:         schema.TypeString,
 							Optional:     true,
-							Default:      ec2.LaunchTemplateInstanceMetadataProtocolIpv6Disabled,
+							Computed:     true,
 							ValidateFunc: validation.StringInSlice(ec2.LaunchTemplateInstanceMetadataProtocolIpv6_Values(), false),
 						},
 						"http_tokens": {
