@@ -28,6 +28,7 @@ func TestAccDataSourceAWSLambdaFunction_basic(t *testing.T) {
 					resource.TestCheckResourceAttrPair(dataSourceName, "description", resourceName, "description"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "function_name", resourceName, "function_name"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "handler", resourceName, "handler"),
+					resource.TestCheckResourceAttrPair(dataSourceName, "image_uri", resourceName, "image_uri"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "invoke_arn", resourceName, "invoke_arn"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "last_modified", resourceName, "last_modified"),
 					resource.TestCheckResourceAttrPair(dataSourceName, "memory_size", resourceName, "memory_size"),
